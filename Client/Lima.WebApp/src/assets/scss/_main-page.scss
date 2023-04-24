@@ -1,0 +1,42 @@
+.app-main-layout {
+  padding-left: 250px;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-top: 70px;
+  background: #fafafc;
+  transition: 0.3s;
+  @include _575-block {
+    padding-top: 70px;
+    padding-left: 0;
+  }
+}
+.app-page {
+  padding: 25px;
+  padding-bottom: 50px;
+  min-height: 80vh;
+  position: relative;
+  @include _575-block {
+    padding: 15px;
+    padding-bottom: 70px;
+  }
+}
+.small-sidenav {
+  .app-main-layout {
+    padding-left: 80px;
+    @include _575-block {
+      padding-left: 0;
+    }
+  }
+}
+.booking {
+  .filter-bar {
+    width: 92%;
+  }
+
+  .filter-btn {
+    display: none;
+  }
+}
+.bg-red {
+  background: red;
+}

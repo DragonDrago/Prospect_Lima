@@ -1,0 +1,53 @@
+.filters {
+  background: #fff;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: $box-shadow;
+  &-container {
+    padding: 3rem 1.5rem;
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+    @include _991-block {
+      padding: 1rem;
+    }
+  }
+  .filter {
+    margin-bottom: 30px;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+    @include _991-block {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+    }
+    justify-content: space-between;
+    row-gap: 50px;
+  }
+  &-box {
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $blue;
+      margin-bottom: 20px;
+      @include _991-block {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+    justify-content: space-between;
+
+    .login-form__container {
+      margin-bottom: 12px;
+      p {
+        color: #000;
+        font-weight: 600;
+      }
+    }
+  }
+}

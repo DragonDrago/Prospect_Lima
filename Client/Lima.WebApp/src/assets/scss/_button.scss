@@ -1,0 +1,19 @@
+.btn {
+  display: block;
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.9;
+  }
+  &.btn-red {
+    background: $red;
+  }
+  &.btn-blue {
+    background: $blue;
+  }
+}

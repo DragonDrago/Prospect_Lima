@@ -1,0 +1,142 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+//Scroll
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px rgba($blue, 0.1);
+}
+::-webkit-scrollbar {
+  background: rgba(#fff, 0.2);
+  position: absolute;
+  width: 2px;
+}
+::-webkit-scrollbar:hover {
+  display: block;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba($color: $blue, $alpha: 0.8);
+}
+::-webkit-scrollbar:horizontal {
+  height: 2px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+button,
+textarea,
+input,
+select {
+  outline: none;
+  font-family: "Montserrat";
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 1rem;
+  font-weight: 400;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  width: 100%;
+  background: #fff;
+  color: #1f2022;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.overlay-mobile {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  @include _575-block {
+    top: 65px;
+  }
+}
+.mobile-sidenav .overlay-mobile {
+  display: block;
+}
+
+.bg-green {
+  background: $green;
+}
+.bg-ice {
+  background: $ice;
+}
+.bg-blue {
+  background: $blue;
+}
+.bg-grey {
+  background: $grey;
+}
+.bg-yellow {
+  background: $yellow;
+}
+.bg-orange {
+  background: $orange;
+}
+.bg-redorange {
+  background: $redorange;
+}
+.bg-darkpink {
+  background: $darkpink;
+}
+.bg-purple {
+  background: $purple;
+}
+.bg-lightblue {
+  background: $lightblue;
+}
+.bg-darkblue {
+  background: $darkblue;
+}
+.bg-pink {
+  background: $pink;
+}
+
+.settings {
+  .filter-bar {
+    display: none;
+  }
+}
+.page {
+  position: relative;
+  min-height: 80vh;
+  .statistics-menu__card {
+    cursor: auto;
+  }
+}
+.page #map {
+  width: 100%;
+  height: 300px;
+  display: block;
+  margin-top: 20px;
+}
+.page #searchInput {
+  width: 300px;
+  margin-top: 10px;
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+}
+.gmnoprint {
+  display: none;
+}

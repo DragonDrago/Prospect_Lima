@@ -1,0 +1,86 @@
+.reports {
+  .filter-left {
+    margin-bottom: 2rem;
+  }
+  &-page {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+    padding: 2rem 1.5rem;
+    @include _991-block {
+      padding: 0.5rem;
+    }
+    &__top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4rem;
+      @include _991-block {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .input {
+        width: 300px;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+        @include _991-block {
+          width: 100%;
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+  &-charts {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    @include _991-block {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .pie-chart {
+      width: 33%;
+      margin-bottom: 2.5rem;
+      @include _991-block {
+        width: 80%;
+      }
+    }
+  }
+}
+.pie-chart {
+  width: 70%;
+  margin: 1rem auto;
+  &__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2.5rem;
+  }
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    @include _1199-block {
+      font-size: 1rem;
+    }
+    @include _991-block {
+      font-size: 0.7rem;
+    }
+  }
+  &__inner {
+    position: relative;
+  }
+}
+#pie_chart {
+  width: 100% !important;
+  height: auto !important;
+  transform: scale(1.2);
+}

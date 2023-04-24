@@ -1,0 +1,124 @@
+.statistics {
+  &-menu {
+    display: grid;
+    grid-template-columns: repeat(6, 15%);
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    @media (max-width: 1322px) {
+      grid-template-columns: repeat(4, 25%);
+      justify-content: center;
+    }
+    @media (max-width: 1026px) {
+      grid-template-columns: repeat(3, 30%);
+      justify-content: center;
+    }
+    @include _575-block {
+      grid-template-columns: repeat(2, 47%);
+    }
+    i {
+      font-size: 30px;
+      color: $blue;
+      margin-right: 20px;
+      @include _991-block {
+        font-size: 35px;
+        margin-right: 30px;
+      }
+      @include _575-block {
+        margin-right: 15px;
+        font-size: 25px;
+      }
+    }
+    &__card {
+      background: #fff;
+      display: flex;
+      align-items: center;
+      padding: 15px 10px;
+      border-radius: 15px;
+      box-shadow: 0 18px 24px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+      @include _575-block {
+        padding: 10px;
+      }
+    }
+    &__title {
+      font-size: 0.8rem;
+      color: #606e77;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    &__num {
+      font-size: 0.9rem;
+      color: $blue;
+      font-weight: 700;
+      @include _575-block {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+.statistic-page {
+  justify-content: center;
+  grid-template-columns: repeat(3, 16%);
+  @media (max-width: 1476px) {
+    grid-template-columns: repeat(3, 25%);
+  }
+  @include _1199-block {
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+  }
+  @include _767-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .statistics-menu__card {
+      width: 48%;
+    }
+  }
+}
+.statistic-visit {
+  grid-template-columns: repeat(5, 18%);
+  @media (max-width: 1476px) {
+    justify-content: space-between;
+  }
+  @include _1199-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .statistics-menu__card {
+      width: 48%;
+    }
+  }
+}
+.statistic-anything {
+  grid-template-columns: repeat(6, 16%);
+  gap: 12px;
+  justify-content: center;
+  @media (max-width: 1476px) {
+    grid-template-columns: repeat(3, 32%);
+  }
+  @include _575-block {
+    grid-template-columns: repeat(2, 48%);
+  }
+}
+.statistic-shipping {
+  justify-content: center;
+  grid-template-columns: repeat(4, 16%);
+  @media (max-width: 1476px) {
+    grid-template-columns: repeat(4, 23%);
+    justify-content: space-between;
+  }
+  @include _1199-block {
+    grid-template-columns: repeat(2, 48%);
+    justify-content: center;
+  }
+}
+.statistic-reports {
+  justify-content: center;
+  grid-template-columns: repeat(4, 18%);
+  margin-bottom: 5rem;
+  @media (max-width: 1244px) {
+    grid-template-columns: repeat(2, 45%);
+    // justify-content: space-between;
+  }
+}

@@ -1,0 +1,136 @@
+.select {
+  color: #333;
+  option {
+    color: #333;
+    border: none;
+  }
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 10px 20px;
+  background: #ebebeb;
+  border-radius: 20px;
+  height: 40px;
+}
+input[type="number"],
+input[type="time"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-outer-spin-button,
+input[type="time"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.6);
+}
+.select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.modal-form {
+  .form-select::after {
+    left: 90%;
+  }
+}
+.form-select {
+  position: relative;
+  width: 100%;
+  &::after {
+    content: "";
+    display: block;
+    background: url("../icons/arrow-down.svg");
+    background-repeat: no-repeat;
+    z-index: 55;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translateY(-50%);
+  }
+}
+
+.file-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+  padding-right: 5px;
+  input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .btn {
+    height: 30px;
+    border-radius: 15px;
+    padding: 0;
+    width: 90px;
+    margin-right: -15px;
+    @include _575-block {
+      width: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    span {
+      @include _575-block {
+        display: none;
+      }
+    }
+  }
+}
+
+.input-group {
+  position: relative;
+}
+.input {
+  border: none;
+  font: inherit;
+  color: #333;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 10px 20px;
+  background: #ebebeb;
+  border-radius: 20px;
+  height: 40px;
+  width: 100%;
+}
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(20px, 10px);
+  transition: transform 0.25s;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.input:focus + .input-label,
+.input:not(:placeholder-shown) + .input-label {
+  transform: translate(15px, -10px) scale(0.8);
+  color: #333;
+  padding: 0 5px;
+  background: #fff;
+  border-radius: 5px;
+}
+.controls {
+  position: absolute;
+  transition: 0.3s;
+}
+.count {
+}
+
+.quantity-input {
+  width: 50px;
+  padding: 5px 10px !important;
+  border-radius: 10px;
+  margin: 0 10px;
+}

@@ -1,0 +1,25 @@
+.rules {
+  &-modal {
+    .modal {
+      max-width: 800px;
+    }
+    .login-form__container {
+      margin-bottom: 12px;
+      
+      p {
+        color: #000;
+        font-weight: 600;
+      }
+    }
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 31%);
+      row-gap: 20px;
+      justify-content: space-between;
+    }
+  }
+  &-title {
+    color: $blue;
+    font-size: 1.2rem;
+  }
+}

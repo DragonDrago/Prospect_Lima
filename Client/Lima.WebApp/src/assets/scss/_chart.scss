@@ -1,0 +1,33 @@
+.chart {
+  background: #fff;
+  width: 100%;
+  box-shadow: $box-shadow;
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  @include _991-block {
+    margin-bottom: 15px;
+    padding: 15px 5px;
+  }
+
+  &-title {
+    text-align: center;
+    font-size: 22px;
+    color: $blue;
+    font-weight: 700;
+    margin-bottom: 10px;
+    @include _991-block {
+      font-size: 18px;
+    }
+  }
+  canvas {
+    height: 300px !important;
+    width: 100% !important;
+    @include _991-block {
+      height: 200px !important;
+    }
+    @include _575-block {
+      height: 170px !important;
+    }
+  }
+}

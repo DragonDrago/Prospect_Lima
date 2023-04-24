@@ -1,0 +1,42 @@
+.calendar {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: $box-shadow;
+  border-radius: 10px;
+  .fc .fc-button-primary {
+    background-color: $blue;
+    border-color: $blue;
+    &:hover,
+    &.fc-button-active {
+      background-color: #062c8b !important;
+      border-color: #062c8b !important;
+    }
+  }
+  @include _1199-block {
+    .fc .fc-toolbar {
+      flex-direction: column;
+      .fc-toolbar-chunk {
+        margin-bottom: 10px;
+      }
+      .fc-button-group {
+        button {
+          padding: 5px 10px;
+          line-height: 1;
+          font-size: 0.8rem;
+          span {
+            font-size: 1rem;
+            line-height: 1;
+          }
+        }
+      }
+      .fc-today-button {
+        padding: 6.5px 10px;
+        line-height: 1;
+        font-size: 0.8rem;
+      }
+      .fc-toolbar-title {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

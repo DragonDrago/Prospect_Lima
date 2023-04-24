@@ -1,0 +1,36 @@
+$main-bg: #fff;
+$boxed-width: 1140px;
+
+$blue: #336cfb;
+$red: #ed5564;
+$green: #83c340;
+$ice: #29c2c2;
+$grey: #aab7b7;
+$yellow: #f1c40f;
+$orange: #e18a00;
+$redorange: #e74c3c;
+$darkpink: #d43480;
+$purple: #ad159e;
+$lightblue: #37b4e1;
+$darkblue: #34495e;
+$pink: #dbadff;
+
+$success-color: #b7ce63;
+$success-contrast: #000;
+$info-color: #64b5f6;
+$info-contrast: #000;
+$warning-color: #e9e165;
+$warning-contrast: #000;
+$error-contrast: #fff;
+
+$box-shadow: 0 0 20px
+  rgba(
+    $color: #000000,
+    $alpha: 0.05,
+  );
+
+:root {
+  --main-color: main-palette(500);
+  --main-bg: #fff;
+  --boxed-width: 1140px;
+}

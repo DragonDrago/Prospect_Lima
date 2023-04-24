@@ -1,0 +1,76 @@
+.rating {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include _991-block {
+    flex-direction: column;
+  }
+  &-box {
+    width: 49%;
+    background: #fff;
+    padding: 1rem 1rem 2rem;
+    box-shadow: $box-shadow;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    @include _991-block {
+      width: 100%;
+    }
+  }
+  &-title {
+    text-align: center;
+    color: $blue;
+    margin-bottom: 1rem;
+  }
+  &-list {
+    li {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      padding: 0.8rem;
+      .text {
+        font-weight: 500;
+        @include _575-block {
+          font-size: 0.8rem;
+        }
+      }
+      span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        display: block;
+        @include _575-block {
+          height: 2px;
+        }
+      }
+    }
+    li:nth-child(odd) {
+      span {
+        background: $blue;
+        width: 75%;
+      }
+    }
+    li:nth-child(even) {
+      span {
+        background: $red;
+        width: 50%;
+      }
+    }
+  }
+  &-user {
+    img {
+      display: block;
+      width: 50%;
+      margin: 0 auto 1rem;
+    }
+    .name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .position {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
+}

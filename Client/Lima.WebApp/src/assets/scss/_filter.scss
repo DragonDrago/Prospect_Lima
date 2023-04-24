@@ -1,0 +1,117 @@
+.filter {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  .fullbar {
+    width: 100% !important;
+  }
+  position: relative;
+  @media (max-width: 1275px) {
+    align-items: flex-start;
+  }
+  @include _575-block {
+    flex-direction: column;
+    .filter-name {
+      margin-bottom: 10px;
+    }
+    .filter-btn {
+      position: absolute;
+      top: 35px;
+      right: 0;
+      &.no-filter {
+        top: 0;
+      }
+    }
+    .filter-bar {
+      width: 90%;
+    }
+  }
+  &-left {
+    display: flex;
+    color: $blue;
+    align-items: center;
+    margin-right: 10px;
+    i {
+      display: block;
+      margin-right: 10px;
+      margin-bottom: 5px;
+    }
+  }
+  &-name {
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  &-bar {
+    display: flex;
+    background: #fff;
+    width: 85%;
+    padding: 7px;
+    box-shadow: $box-shadow;
+    border-radius: 8px;
+    &__title {
+      color: #606e77;
+      font-weight: 700;
+      margin-right: 15px;
+      margin-top: 2px;
+    }
+  }
+  &-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    &__items {
+      background: #e5e5e5;
+      padding: 3px 7px;
+      border-radius: 5px;
+      color: #606e77;
+      font-weight: 500;
+      position: relative;
+      padding-right: 15px;
+      @media (max-width: 1275px) {
+        height: -webkit-fill-available;
+      }
+      @include _575-block {
+        font-size: 0.9rem;
+        padding-top: 5px;
+      }
+      &:not(:last-child) {
+        margin-right: 7px;
+      }
+      span {
+        cursor: pointer;
+        position: absolute;
+        top: -2px;
+        right: 2px;
+        @include _575-block {
+          font-size: 1rem !important;
+        }
+      }
+    }
+  }
+  &-btn {
+    border: none;
+    display: block;
+    background: transparent;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    &__left {
+      padding: 5px 10px !important;
+      margin-right: 0.5rem;
+      height: 29px;
+      @include _575-block {
+        font-size: 0.8rem !important;
+        height: fit-content !important;
+      }
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+    i {
+      color: $blue;
+      font-size: 1.8rem;
+    }
+  }
+}
